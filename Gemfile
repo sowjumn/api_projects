@@ -4,4 +4,15 @@ source "https://rubygems.org"
 
 git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
- gem "sinatra"
+gem "sinatra"
+gem "pg" # postgreSQL
+gem "activerecord" # the ORM
+gem "sinatra-activerecord"
+gem "rake"
+
+group :test do
+  gem 'rspec'
+  gem 'simplecov', require: false
+#   gem 'simplecov-console', require: false # graphical test coverage
+#   gem "capybara" # feature tests
+end
